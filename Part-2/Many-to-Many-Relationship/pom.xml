@@ -2,23 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>Hibernate_ORM_Assignment</artifactId>
+        <groupId>org.example</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>Hibernate_ORM_Assignment</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>Many_to_Many_Relationship</module>
-        <module>One_to_Many_Relationship</module>
-        <module>One-to-One_Relationship</module>
-        <module>One_to_Many_Relationship</module>
-        <module>Many_to_Many_Relationship</module>
-        <module>Normal_Add</module>
-        <module>One-to-one-Relationship</module>
-        <module>One-to-Many-Relationship</module>
-        <module>Many-to-Many-Relationship</module>
-    </modules>
+    <artifactId>Many-to-Many-Relationship</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

@@ -1,6 +1,6 @@
 
-import example.org.entity.Author;
-import example.org.entity.Book;
+import example.org.Author;
+import example.org.Book;
 import example.org.utill.FactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

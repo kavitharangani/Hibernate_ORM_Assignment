@@ -13,6 +13,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.println("[1] Add  Book   \t\t\t  [2] Update Book \n");
         System.out.println("[3] Search Book  \t\t\t [4] Delete Book \n");
+        System.out.println("[5]  saveAuthorWithMultipleBooks  \n");
 
         System.out.print("Enter an option to continue >");
         int option = input.nextInt();
@@ -29,6 +30,9 @@ public class Main {
                 break;
             case 4:
                 delete();
+                break;
+            case 5:
+                saveAuthorWithMultipleBooks();
                 break;
             default:
                 homePage();
@@ -57,12 +61,55 @@ public class Main {
             case 4:
                 delete();
                 break;
+            case 5:
+                saveAuthorWithMultipleBooks();
+                break;
             default:
                 homePage();
 
         }
 
     }
+
+    private static void saveAuthorWithMultipleBooks() {
+         Scanner input =new Scanner(System.in);
+         Book book=new Book();
+         Book book1=new Book();
+         Author author=new Author();
+         Session session = FactoryConfiguration.getInstance().getSession();
+         Transaction transaction =session.beginTransaction();
+
+         System.out.print("Enter Author Id: ");
+         author.setId(input.next());
+         System.out.print("Enter Author Name: ");
+         author.setName(input.next());
+
+        System.out.print("How many books do you want to add for this author? ");
+        int numBooks = input.nextInt();
+
+        for (int i = 0; i < numBooks; i++) {
+            Book book2=new Book();
+            System.out.print("Enter Book Id: ");
+            book.setId(input.next());
+            System.out.print("Enter Book Name: ");
+            book.setName(input.next());
+            System.out.print("Enter Book Price: ");
+            book.setPrice(input.nextDouble());
+
+            add();
+
+
+        }
+
+        session.persist(author);
+
+
+        transaction.commit();
+        session.close();
+
+        System.out.println("Author with multiple books saved successfully!");
+    }
+
     private static void add() {
         System.out.println("+-------------------------------------------------------------+");
         System.out.println("|                        SAVE MANAGEMENT                     |");

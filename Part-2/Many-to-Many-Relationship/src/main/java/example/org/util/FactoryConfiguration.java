@@ -1,7 +1,7 @@
-package example.org.utill;
+package example.org.util;
 
-import example.org.Author;
-import example.org.Book;
+import example.org.entity.Author;
+import example.org.entity.Book;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
