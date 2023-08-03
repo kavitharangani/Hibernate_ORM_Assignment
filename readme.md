@@ -11,7 +11,17 @@ Project
 
 ✔️ Normally  Add,Update,Search,Delete Book
 
-✔️One To One RelationShip Add,Update,Search,Delete Book and Author
+------Terminal Open And Add data------
+
+✔️One To One RelationShip Add,Update,Search,Delete Book and Author 
+
+✔️One To Many RelationShip Add,Update,Search,Delete Book and Author
+
+✔️Many To Many RelationShip Add,Update,Search,Delete Book and Author
+
+------Auto Save------
+
+✔️One To One RelationShip Add,Update,Search,Delete Book and Author 
 
 ✔️One To Many RelationShip Add,Update,Search,Delete Book and Author
 
